@@ -3,7 +3,7 @@ font pango:Fira Sans, FontAwesome5Free, FontAwesome5Brands 14
 # A.k.a. "Super" or "Windows"
 set $mod Mod4
 
-set $terminal alacritty
+set $terminal alacritty --working-directory $HOME
 set $browser firefox-developer-edition
 set $editor leafpad
 set $config "$HOME/.config/i3/config"
