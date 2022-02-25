@@ -1,4 +1,4 @@
-# i3conf
+## i3conf
 My i3 config, scripts (mostly copied from net) for i3blocks and i3blocks config
 
 
@@ -69,7 +69,13 @@ See `scripts/temp.pl`
 
 See `scripts/memory.sh`
 
-###
+#### Volume
+
+See `scripts/volume.sh`
+
+* `pulseaudio`
+* `pavucontrol`
+* `pulseaudio-alsa`
 
 ### Applications
 * `firefox-developer-edition` -- browser -- `Win+D; Enter`
