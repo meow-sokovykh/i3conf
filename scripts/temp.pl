@@ -56,8 +56,8 @@ close(SENSORS);
 $temperature eq -9999 and die 'Cannot find temperature';
 
 # Print short_text, full_text
-printf "%3d°C\n", $temperature;
-printf "%3d°C\n", $temperature;
+printf "%d°C\n", $temperature;
+printf "%d°C\n", $temperature;
 
 # Print color, if needed
 if ($temperature >= $t_crit) {
