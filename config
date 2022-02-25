@@ -147,6 +147,7 @@ bar {
 assign [class="Alacritty"] $ws1 #Do not want it
 
 assign [instance="Navigator" window_role="browser"] $ws2
+assign [class="Enpass"] $ws2
 
 assign [class="code-oss"] $ws3
 assign [class="Leafpad"] $ws3
@@ -234,4 +235,4 @@ exec $browser
 exec code
 exec telegram-desktop
 exec transmission
-
+exec Enpass
