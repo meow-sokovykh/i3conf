@@ -16,7 +16,11 @@
 
 #------------------------------------------------------------------------
 
-INTERFACE="${BLOCK_INSTANCE:-wlan0}"
+if [[ -n $BLOCK_INSTANCE ]]; then
+  INTERFACE=$BLOCK_INSTANCE
+else
+  INTERFACE=$(ip route | awk '/^default/ { print $5 ; exit }')
+fi
 
 #------------------------------------------------------------------------
 
