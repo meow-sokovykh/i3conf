@@ -1,12 +1,14 @@
-font pango:Fira Sans, FontAwesome5Free, FontAwesome5Brands 11
+font pango:Fira Sans, FontAwesome5Free, FontAwesome5Brands 14
 
+# A.k.a. "Super" or "Windows"
 set $mod Mod4
 
-set $terminal uxterm -e fish
+set $terminal alacritty
 set $browser firefox-developer-edition
 set $editor leafpad
-set $config "/home/dokel/.config/i3/config"
-set $filebrowser uxterm -name ranger -e ranger
+set $config "$HOME/.config/i3/config"
+set $filebrowser $terminal -e ranger
+set $screenshot_path ~/Pictures/screenshots/
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -99,8 +101,8 @@ bindsym $mod+KP_Begin workspace $ws5
 bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
 bindsym $mod+Shift+3 move container to workspace $ws3
-bindsym $mod+Shift+KP_4 move container to workspace $ws4
-bindsym $mod+Shift+KP_5 move container to workspace $ws5
+bindsym $mod+Shift+KP_Left move container to workspace $ws4
+bindsym $mod+Shift+KP_Begin move container to workspace $ws5
 
 #Move to urgent window
 bindsym $mod+grave [urgent=latest] focus
@@ -112,36 +114,8 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 #bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
-# resize window (you can also use the mouse for that)
-mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
-
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
-
-        # back to normal: Enter or Escape or $mod+r
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
-}
-
-bindsym $mod+r mode "resize"
-
 #i3-gaps feature: Don't show if only window
 smart_borders on
-
 
 # window colours: border background text
 client.focused        $main_color $main_color $white $main_color $main_color
@@ -154,7 +128,7 @@ bar {
 	separator_symbol $bar_separator
 	status_command i3blocks -c $HOME/.config/i3/i3blocks.conf
 	position top
-	height 28
+	height 36
 
         # Do not allow applications to use the bar as icon tray
 	tray_output none
@@ -169,32 +143,23 @@ bar {
 	}
 }
 
-
-
-# window colours: border background text
-
-
-#Background
-exec --no-startup-id feh --bg-scale /home/dokel/Pictures/background.png
-
 #Let's assign some apps to their workspaces
-#assign [class="UXTerm"] $ws1 #Do not want it
+assign [class="Alacritty"] $ws1 #Do not want it
 
 assign [instance="Navigator" window_role="browser"] $ws2
 
-assign [class="Atom"] $ws3
-assign [class="Remarkable"] $ws3
+assign [class="code-oss"] $ws3
 assign [class="Leafpad"] $ws3
 
 assign [class="TelegramDesktop"] $ws4
 
 assign [class="Pinta"] $ws5
+assign [class="Gimp"] $ws5
 assign [class="Evince"] $ws5
 assign [class="Transmission-gtk"] $ws5
 assign [class="libreoffice"] $ws5
 assign [class="libreoffice-writer"] $ws5
 assign [class="Steam"] $ws5
-assign [class="com-yworks-A-yEd"] $ws5
 
 # Correct handling of floating windows
 for_window [window_role="pop-up"] floating enable
@@ -202,11 +167,10 @@ for_window [window_role="bubble"] floating enable
 for_window [window_role="task_dialog"] floating enable
 for_window [window_role="dialog"] floating enable
 for_window [window_role="menu"] floating enable
-for_window [window_role="Preferences"] floating enable
-for_window [class="UXTerm" instance="ranger"] floating enable
+for_window [window_role="Preferences"] floating enablee
 
 #Screenshot
-bindsym --release Print exec --no-startup-id scrot '%Y-%m-%d_%H:%M_$wx$h.png' -u -e 'mv $f ~/Pictures/screenshots'
+bindsym --release Print exec --no-startup-id scrot '%Y-%m-%d_%H:%M_$wx$h.png' -u -e 'mv $f $screenshot_path'
 
 #Launching applications
 # start a terminal
@@ -225,6 +189,7 @@ mode $mode_launcher {
 	bindsym Return exec $browser; mode "default"
 	bindsym f exec $filebrowser; mode "default"
 	bindsym p exec pinta; mode "default"
+	bindsym g exec gimp; mode "default"
 	bindsym o exec libreoffice; mode "default"
 	bindsym t exec telegram-desktop; mode "default"
 	bindsym c exec $editor $config; mode "default"
@@ -237,9 +202,9 @@ mode $mode_launcher {
 
 
 mode $mode_work_launcher {
-	bindsym Return exec atom; mode "default"
+	bindsym Return exec code; mode "default"
 	bindsym e exec $editor; mode "default"
-	bindsym r exec remarkable; mode "default"
+	bindsym p exec enpass; mode "default"
 
 	bindsym Escape mode "default"
 	bindsym $mod+d mode $mode_launcher
@@ -250,6 +215,7 @@ mode $mode_work_launcher {
 
 mode $mode_game_launcher {
 	bindsym Return exec steam; mode "default"
+	bindsym t exec transmission-gtk; mode "default"
 
 	bindsym Escape mode "default"
 	bindsym $mod+d mode $mode_launcher
@@ -258,14 +224,14 @@ mode $mode_game_launcher {
 }
 
 #Volume
-bindsym $mod+KP_Add exec sh /home/dokel/.config/i3/otherscripts/volumeup.sh
-bindsym $mod+KP_Subtract exec sh /home/dokel/.config/i3/otherscripts/volumedown.sh
+bindsym $mod+KP_Add exec sh $HOME/.config/i3/otherscripts/volumeup.sh
+bindsym $mod+KP_Subtract exec sh $HOME/.config/i3/otherscripts/volumedown.sh
 
 #Autorun
 exec $terminal
 exec $terminal
 exec $browser
-exec $atom
+exec code
 exec telegram-desktop
 exec transmission
 
