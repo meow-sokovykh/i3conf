@@ -7,10 +7,13 @@ My i3 config, scripts (mostly copied from net) for i3blocks and i3blocks config
 ### Fonts
 * `otf-font-awesome` for icons
 * `otf-fira-sans` for interface
+* `otf-fira-mono` for terminal
 
 ### Terminal
 * `alacritty` -- Terminal -- `Win+Enter`
-  * (TODO: links to it's config)  
+  * [~/.Xresources](https://gist.github.com/meow-sokovykh/19dfb0dcb03ba9ab6324037a84f887d4)
+  * Font might be broken, so, play with values a bit: `~/.config/alacritty/alacritty.yml` -> `font: { size: 9 }`
+
 * `ranger` -- CLI filebrowser -- `Win+D; F`
 * `scrot` -- CLI tool for screenshots. Triggers on `PrtSc`, requires `~/Pictures/screenshots` folder
 
