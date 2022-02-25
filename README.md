@@ -76,6 +76,7 @@ See `scripts/volume.sh`
 * `pulseaudio`
 * `pavucontrol`
 * `pulseaudio-alsa`
+* `alsa-utils`
 
 ### Applications
 * `firefox-developer-edition` -- browser -- `Win+D; Enter`
