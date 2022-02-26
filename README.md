@@ -95,7 +95,7 @@ See `scripts/volume.sh`
 #### Social
 * `telegram-desktop` -- messenger -- `Win+D; T`
 * `thunderbird` -- mail client -- `Win+D; M`
-* `discord` -- mail client -- `Win+D; D`
+* `discord` -- messenger -- `Win+D; D`
 
 #### Editors
 * `pinta` -- for simple stuff -- `Win+D; P`
