@@ -155,6 +155,7 @@ assign [class="Leafpad"] $ws3
 assign [class="Enpass"] $ws3
 
 assign [class="TelegramDesktop"] $ws4
+assign [class="Thunderbird"] $ws4
 
 assign [class="Pinta"] $ws5
 assign [class="Gimp"] $ws5
@@ -195,6 +196,7 @@ mode $mode_launcher {
 	bindsym g exec gimp; mode "default"
 	bindsym o exec libreoffice; mode "default"
 	bindsym t exec telegram-desktop; mode "default"
+	bindsym m exec thunderbird; mode "default"
 	bindsym c exec $editor $config; mode "default"
 
 	bindsym Escape mode "default"
@@ -237,4 +239,5 @@ exec $browser
 exec code
 exec telegram-desktop
 exec transmission
-exec Enpass
+exec enpass
+exec thunderbird
