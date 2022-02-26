@@ -156,6 +156,7 @@ assign [class="Enpass"] $ws3
 
 assign [class="TelegramDesktop"] $ws4
 assign [class="Thunderbird"] $ws4
+assign [class="discord"] $ws4
 
 assign [class="Pinta"] $ws5
 assign [class="Gimp"] $ws5
@@ -197,6 +198,7 @@ mode $mode_launcher {
 	bindsym o exec libreoffice; mode "default"
 	bindsym t exec telegram-desktop; mode "default"
 	bindsym m exec thunderbird; mode "default"
+	bindsym d exec discord; mode "default"
 	bindsym c exec $editor $config; mode "default"
 
 	bindsym Escape mode "default"
