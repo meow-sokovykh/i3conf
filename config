@@ -217,7 +217,7 @@ mode $mode_work_launcher {
 
 
 mode $mode_game_launcher {
-	bindsym Return exec steam; mode "default"
+	bindsym Return exec steam-native; mode "default"
 	bindsym t exec transmission-gtk; mode "default"
 
 	bindsym Escape mode "default"
