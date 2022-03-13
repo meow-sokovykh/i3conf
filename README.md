@@ -16,6 +16,7 @@ My i3 config, scripts (mostly copied from net) for i3blocks and i3blocks config
 
 * `ranger` -- CLI filebrowser -- `Win+D; F`
 * `scrot` -- CLI tool for screenshots. Triggers on `PrtSc`, requires `~/Pictures/screenshots` folder
+* `brightnessctl` -- CLI tool for setting hardware brightness
 
 ### Other
 * `i3lock` -- screensaver -- `Win+L`
