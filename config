@@ -243,3 +243,4 @@ exec telegram-desktop
 exec transmission
 exec enpass
 exec thunderbird
+exec brightnessctl set 100
