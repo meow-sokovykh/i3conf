@@ -151,6 +151,7 @@ assign [class="Alacritty"] $ws1 #Do not want it
 assign [instance="Navigator" window_role="browser"] $ws2
 
 assign [class="code-oss"] $ws3
+assign [class="notion-app-enhanced"] $ws3
 assign [class="Leafpad"] $ws3
 assign [class="Enpass"] $ws3
 
@@ -212,6 +213,7 @@ mode $mode_work_launcher {
 	bindsym Return exec code; mode "default"
 	bindsym e exec $editor; mode "default"
 	bindsym p exec enpass; mode "default"
+	bindsym n exec notion-app-enhanced; mode "default"
 
 	bindsym Escape mode "default"
 	bindsym $mod+d mode $mode_launcher
@@ -244,3 +246,4 @@ exec transmission
 exec enpass
 exec thunderbird
 exec brightnessctl set 100
+exec warp-cli connect
