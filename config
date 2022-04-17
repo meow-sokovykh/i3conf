@@ -154,6 +154,7 @@ assign [class="code-oss"] $ws3
 assign [class="notion-app-enhanced"] $ws3
 assign [class="Leafpad"] $ws3
 assign [class="Enpass"] $ws3
+assign [class="Todoist"] $ws3
 
 assign [class="TelegramDesktop"] $ws4
 assign [class="Thunderbird"] $ws4
@@ -214,6 +215,7 @@ mode $mode_work_launcher {
 	bindsym e exec $editor; mode "default"
 	bindsym p exec enpass; mode "default"
 	bindsym n exec notion-app-enhanced; mode "default"
+	bindsym t exec todoist; mode "default"
 
 	bindsym Escape mode "default"
 	bindsym $mod+d mode $mode_launcher
@@ -240,7 +242,6 @@ bindsym $mod+KP_Subtract exec sh $HOME/.config/i3/otherscripts/volumedown.sh
 exec $terminal
 exec $terminal
 exec $browser
-exec code
 exec telegram-desktop
 exec transmission
 exec enpass

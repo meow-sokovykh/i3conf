@@ -106,6 +106,7 @@ See `scripts/volume.sh`
 * `evince` -- pdf etc. viewer -- no shortcut
 * `libreoffice-fresh` -- office package -- `Win+D; O`
 * `notion-app-enhanced` -- notebook -- `Win+Tab; N`
+* `todoist` (via `snapd`) -- task-manager -- `Win+Tab; T`
 
 #### Other
 * `transmission-gtk` -- torrent client -- `Win+G; T`
