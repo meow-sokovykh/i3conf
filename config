@@ -235,8 +235,8 @@ mode $mode_game_launcher {
 }
 
 #Volume
-bindsym $mod+KP_Add exec sh $HOME/.config/i3/otherscripts/volumeup.sh
-bindsym $mod+KP_Subtract exec sh $HOME/.config/i3/otherscripts/volumedown.sh
+bindsym $mod+KP_Add exec sh $HOME/.config/i3/scripts/volumeup.sh
+bindsym $mod+KP_Subtract exec sh $HOME/.config/i3/scripts/volumedown.sh
 
 #Autorun
 exec $terminal
