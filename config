@@ -157,7 +157,7 @@ assign [class="Enpass"] $ws3
 assign [class="Todoist"] $ws3
 
 assign [class="TelegramDesktop"] $ws4
-assign [class="Thunderbird"] $ws4
+assign [class="thunderbird"] $ws4
 assign [class="discord"] $ws4
 
 assign [class="Pinta"] $ws5
@@ -243,7 +243,7 @@ exec $terminal
 exec $terminal
 exec $browser
 exec telegram-desktop
-exec transmission
+exec transmission-gtk
 exec enpass
 exec thunderbird
 exec brightnessctl set 100
