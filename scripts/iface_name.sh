@@ -13,7 +13,7 @@ fi
 if echo $IFACE_NAME | grep -q Cloudflare
 then
 	POSTFIX=" [$IFACE_NAME]"
-	IFACE_NAME="$(warp-cli network | grep WiFi | cut -f2 -d ' ' | cut -c 2- | rev | cut -c 2- | rev)"
+	IFACE_NAME="$(warp-cli network | head -1 | cut -f2 -d ' ' | cut -c 2- | rev | cut -c 2- | rev)"
 fi
 
 if echo $IFACE_NAME | grep -q wlan
