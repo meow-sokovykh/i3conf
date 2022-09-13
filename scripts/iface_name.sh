@@ -18,8 +18,8 @@ fi
 
 if echo $IFACE_NAME | grep -q wlan
 then
-	IFACE_NAME="$IFACE_NAME/$(iw dev $IFACE_NAME link | awk '/SSID/{print $2}')$POSTFIX"
+	IFACE_NAME=$IFACE_NAME/$(iw dev $IFACE_NAME link | awk '/SSID/{print $2}')
 fi
 
-echo $IFACE_NAME
-echo $IFACE_NAME
+echo $IFACE_NAME$POSTFIX
+echo $IFACE_NAME$POSTFIX

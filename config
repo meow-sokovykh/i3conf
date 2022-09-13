@@ -9,6 +9,7 @@ set $editor leafpad
 set $config "$HOME/.config/i3/config"
 set $filebrowser $terminal -e ranger
 set $screenshot_path ~/Pictures/screenshots/
+set $scripts "$HOME/.config/i3/scripts"
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -235,8 +236,12 @@ mode $mode_game_launcher {
 }
 
 #Volume
-bindsym $mod+KP_Add exec sh $HOME/.config/i3/scripts/volumeup.sh
-bindsym $mod+KP_Subtract exec sh $HOME/.config/i3/scripts/volumedown.sh
+bindsym $mod+KP_Add exec sh $scripts/volumeup.sh
+bindsym $mod+KP_Subtract exec sh $scripts/volumedown.sh
+
+#Proxy
+bindsym $mod+P exec sh $scripts/proxyon.sh
+bindsym $mod+Shift+P exec sh $scripts/proxyoff.sh
 
 #Autorun
 exec $terminal
@@ -247,4 +252,3 @@ exec transmission-gtk
 exec enpass
 exec thunderbird
 exec brightnessctl set 100
-exec warp-cli connect
