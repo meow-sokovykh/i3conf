@@ -10,9 +10,15 @@ then
 	exit
 fi
 
+if echo $IFACE_NAME | grep -q Cloudflare
+then
+	POSTFIX=" [$IFACE_NAME]"
+	IFACE_NAME="$(warp-cli network | grep WiFi | cut -f2 -d ' ' | cut -c 2- | rev | cut -c 2- | rev)"
+fi
+
 if echo $IFACE_NAME | grep -q wlan
 then
-	IFACE_NAME=$(iw dev $IFACE_NAME link | awk '/SSID/{print $2}')
+	IFACE_NAME="$IFACE_NAME/$(iw dev $IFACE_NAME link | awk '/SSID/{print $2}')$POSTFIX"
 fi
 
 echo $IFACE_NAME
