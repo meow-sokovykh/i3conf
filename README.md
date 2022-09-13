@@ -45,6 +45,10 @@ See `scripts/wifi.sh`
 
 * `iproute2`
 
+#### Network name
+
+See `scripts/iface_name.sh`
+
 #### Local IP
 
 See `scripts/iface.sh`
@@ -111,3 +115,4 @@ See `scripts/volume.sh`
 #### Other
 * `transmission-gtk` -- torrent client -- `Win+G; T`
 * `steam` + `steam-native-runtime` -- game store -- `Win+G; Enter`
+* `cloudflare-warp-bin` -- `Win+P` for ON, `Win+Shift+P` for off
