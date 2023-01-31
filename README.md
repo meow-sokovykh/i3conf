@@ -50,15 +50,21 @@ See `scripts/wifi.sh`
 
 See `scripts/iface_name.sh`
 
+Use `Win+N` to refresh
+
 #### Local IP
 
 See `scripts/iface.sh`
+
+Use `Win+N` to refresh
 
 * `iproute2`
 
 #### External IP
 
 See `scripts/extip.sh`
+
+Use `Win+N` to refresh
 
 * `wget`
 * Note: sends requiest to http://ipinfo.io
