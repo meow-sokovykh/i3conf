@@ -44,6 +44,7 @@ See `scripts/battery.py`
 See `scripts/wifi.sh`
 
 * `iproute2`
+* `wireless_tools` (for `iwgetid`) -- only if you want ESSID name from this script
 
 #### Network name
 

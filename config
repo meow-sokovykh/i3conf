@@ -175,7 +175,7 @@ for_window [window_role="bubble"] floating enable
 for_window [window_role="task_dialog"] floating enable
 for_window [window_role="dialog"] floating enable
 for_window [window_role="menu"] floating enable
-for_window [window_role="Preferences"] floating enablee
+for_window [window_role="Preferences"] floating enable
 
 #Screenshot
 bindsym --release Print exec --no-startup-id scrot '%Y-%m-%d_%H:%M_$wx$h.png' -u -e 'mv $f $screenshot_path'
@@ -242,6 +242,7 @@ bindsym $mod+KP_Subtract exec sh $scripts/volumedown.sh
 #Proxy
 bindsym $mod+P exec sh $scripts/proxyon.sh
 bindsym $mod+Shift+P exec sh $scripts/proxyoff.sh
+bindsym $mod+N exec pkill -RTMIN+2 i3blocks
 
 #Autorun
 exec $terminal
