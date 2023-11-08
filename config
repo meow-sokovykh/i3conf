@@ -184,7 +184,7 @@ bindsym --release Print exec --no-startup-id scrot '%Y-%m-%d_%H:%M_$wx$h.png' -u
 # start a terminal
 bindsym $mod+Return exec $terminal
 
-set $mode_launcher "/"
+set $mode_launcher ""
 bindsym $mod+d mode $mode_launcher
 
 set $mode_work_launcher "/"
