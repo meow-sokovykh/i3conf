@@ -116,7 +116,7 @@ See `scripts/volume.sh`
 #### Office
 * `evince` -- pdf etc. viewer -- no shortcut
 * `libreoffice-fresh` -- office package -- `Win+D; O`
-* `notion-app-enhanced` -- notebook -- `Win+Tab; N`
+* `notion-snap-reborn`(via `snapd`) -- notebook -- `Win+Tab; N`
 * `todoist` (via `snapd`) -- task-manager -- `Win+Tab; T`
 
 #### Other

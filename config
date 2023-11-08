@@ -152,7 +152,7 @@ assign [class="Alacritty"] $ws1 #Do not want it
 assign [instance="Navigator" window_role="browser"] $ws2
 
 assign [class="code-oss"] $ws3
-assign [class="notion-app-enhanced"] $ws3
+assign [class="notion-snap-reborn"] $ws3
 assign [class="Leafpad"] $ws3
 assign [class="Enpass"] $ws3
 assign [class="Todoist"] $ws3
@@ -215,7 +215,7 @@ mode $mode_work_launcher {
 	bindsym Return exec code; mode "default"
 	bindsym e exec $editor; mode "default"
 	bindsym p exec enpass; mode "default"
-	bindsym n exec notion-app-enhanced; mode "default"
+	bindsym n exec notion-snap-reborn; mode "default"
 	bindsym t exec todoist; mode "default"
 
 	bindsym Escape mode "default"
