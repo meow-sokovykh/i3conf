@@ -10,15 +10,21 @@ then
 	exit
 fi
 
+if echo $IFACE_NAME | grep -q tun
+then
+	POSTFIX="$POSTIFX [via $IFACE_NAME]"
+	IFACE_NAME=$(ip route | awk '/^default/ { print $5 ; exit }')
+fi
+
 if echo $IFACE_NAME | grep -q Cloudflare
 then
-	POSTFIX=" [$IFACE_NAME]"
+	POSTFIX="$POSTFIX [$IFACE_NAME]"
 	IFACE_NAME="$(warp-cli network | head -1 | cut -f2 -d ' ' | cut -c 2- | rev | cut -c 2- | rev)"
 fi
 
 if echo $IFACE_NAME | grep -q wlan
 then
-	IFACE_NAME=$IFACE_NAME/$(iw dev $IFACE_NAME link | awk '/SSID/{print $2}')
+	POSTFIX="$POSTFIX [connected to $(iw dev $IFACE_NAME link | awk '/SSID/{print $2}')]"
 fi
 
 echo $IFACE_NAME$POSTFIX
