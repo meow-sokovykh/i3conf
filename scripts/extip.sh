@@ -5,7 +5,6 @@ rnd_id=$(shuf -i 1-10 -n 1)
 rnd_char=$(echo "$special_chars" | cut -c $rnd_id)
 
 IP="$(wget http://ipinfo.io/ip -qO -)"
-COUNTRY="$(curl -s ipinfo.io/country)"
 status=$?
 
 if [[ "$IP" == "" ]]; then
@@ -23,6 +22,15 @@ if [[ "$(echo "$IP" | grep '<')" != "" ]]; then
 	echo -e "prov.block"
 	echo -e "#FF5722"
 else # everything is fine
+	CACHEDIR="/tmp/ip_to_country_cache"
+	if [ ! -d "$CACHEDIR" ]; then
+		mkdir -p "$CACHEDIR"
+	fi
+	if [ ! -f "$CACHEDIR/$IP" ]; then
+		curl -s ipinfo.io/$IP/country | cut -c 1-2 > "$CACHEDIR/$IP"
+	fi
+
+	COUNTRY=$(cat "$CACHEDIR/$IP")
 	echo -e "$IP [$COUNTRY] $rnd_char"
 	echo -e "$IP [$COUNTRY] $rnd_char"
 	echo -e "#4CAF50"
