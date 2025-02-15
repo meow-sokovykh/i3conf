@@ -203,7 +203,7 @@ mode $mode_launcher {
 	bindsym m exec thunderbird; mode "default"
 	bindsym d exec discord; mode "default"
 	bindsym c exec $editor $config; mode "default"
-	bindsym w exec obsidian; mode "default"
+
 
 	bindsym Escape mode "default"
 	bindsym $mod+d mode "default"
@@ -216,7 +216,7 @@ mode $mode_work_launcher {
 	bindsym Return exec code; mode "default"
 	bindsym e exec $editor; mode "default"
 	bindsym p exec enpass; mode "default"
-	bindsym n exec notion-snap-reborn; mode "default"
+	bindsym w exec obsidian; mode "default"
 	bindsym t exec todoist; mode "default"
 
 	bindsym Escape mode "default"
