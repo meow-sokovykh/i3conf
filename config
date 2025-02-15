@@ -152,7 +152,7 @@ assign [class="Alacritty"] $ws1 #Do not want it
 assign [instance="Navigator" window_role="browser"] $ws2
 
 assign [class="code-oss"] $ws3
-assign [class="notion-snap-reborn"] $ws3
+assign [class="obsidian"] $ws3
 assign [class="Leafpad"] $ws3
 assign [class="Enpass"] $ws3
 assign [class="Todoist"] $ws3
@@ -203,6 +203,7 @@ mode $mode_launcher {
 	bindsym m exec thunderbird; mode "default"
 	bindsym d exec discord; mode "default"
 	bindsym c exec $editor $config; mode "default"
+	bindsym w exec obsidian; mode "default"
 
 	bindsym Escape mode "default"
 	bindsym $mod+d mode "default"
