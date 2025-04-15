@@ -202,6 +202,8 @@ mode $mode_launcher {
 	bindsym t exec telegram-desktop; mode "default"
 	bindsym m exec thunderbird; mode "default"
 	bindsym d exec discord; mode "default"
+	bindsym b exec blueberry; mode "default"
+
 	bindsym c exec $editor $config; mode "default"
 
 
@@ -228,6 +230,8 @@ mode $mode_work_launcher {
 
 mode $mode_game_launcher {
 	bindsym Return exec steam-native; mode "default"
+	bindsym p exec portproton; mode "default"
+	bindsym m exec ~/Games/minecraft; mode "default"
 	bindsym t exec transmission-gtk; mode "default"
 
 	bindsym Escape mode "default"
