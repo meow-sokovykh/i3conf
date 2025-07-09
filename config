@@ -199,7 +199,7 @@ mode $mode_launcher {
 	bindsym p exec pinta; mode "default"
 	bindsym g exec gimp; mode "default"
 	bindsym o exec libreoffice; mode "default"
-	bindsym t exec telegram-desktop; mode "default"
+	bindsym t exec Telegram; mode "default"
 	bindsym m exec thunderbird; mode "default"
 	bindsym d exec discord; mode "default"
 	bindsym b exec blueberry; mode "default"
@@ -253,7 +253,7 @@ bindsym $mod+N exec pkill -RTMIN+2 i3blocks
 exec $terminal
 exec $terminal
 exec $browser
-exec telegram-desktop
+exec Telegram
 exec transmission-gtk
 exec enpass
 exec thunderbird
