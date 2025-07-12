@@ -257,4 +257,4 @@ exec Telegram
 exec transmission-gtk
 exec enpass
 exec thunderbird
-exec brightnessctl set 100
+exec brightnessctl set 45000
