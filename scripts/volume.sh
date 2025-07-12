@@ -63,9 +63,9 @@ format() {
 
 case $BLOCK_BUTTON in
   1) pavucontrol &>/dev/null & ;;
-  3) amixer -q -D $MIXER sset $SCONTROL $(capability) toggle ;;  # right click, mute/unmute
-  4) amixer -q -D $MIXER sset $SCONTROL $(capability) ${STEP}+ unmute ;; # scroll up, increase
-  5) amixer -q -D $MIXER sset $SCONTROL $(capability) ${STEP}- unmute ;; # scroll down, decrease
+  3) pactl set-sink-mute "@DEFAULT_SINK@" toggle ;;  # right click, mute/unmute
+  4) bash $HOME/.config/i3/scripts/volumeup.sh;; # scroll up, increase
+  5) bash $HOME/.config/i3/scripts/volumedown.sh;; # scroll down, decrease
 esac
 
 val=$(volume | format)
@@ -74,9 +74,9 @@ if [[ "$val" == "" ]]; then
 	echo ": "
 else
 	if [[ "$val" == "0%" ]]; then
-		label=$(echo ": ")
+		label=$(echo ":  ")
 	else
-		label=$(echo ": ")
+		label=$(echo ":  ")
 	fi
 	printf "%s%4s\n" "$label" "$val"
 	printf "%s%4s" "$label" "$val"
