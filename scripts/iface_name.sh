@@ -10,7 +10,7 @@ then
 	exit
 fi
 
-if echo $IFACE_NAME | grep -q tun
+if echo $IFACE_NAME | grep -qE "amn|tun"
 then
 	POSTFIX="$POSTIFX [via $IFACE_NAME]"
 	IFACE_NAME=$(ip route | awk '/^default/ { print $5 ; exit }')
