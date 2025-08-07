@@ -167,7 +167,7 @@ assign [class="Evince"] $ws5
 assign [class="transmission-gtk"] $ws5
 assign [class="libreoffice"] $ws5
 assign [class="libreoffice-writer"] $ws5
-assign [class="Steam"] $ws5
+assign [class="steam"] $ws5
 
 # Correct handling of floating windows
 for_window [window_role="pop-up"] floating enable
