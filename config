@@ -161,7 +161,7 @@ assign [class="TelegramDesktop"] $ws4
 assign [class="thunderbird"] $ws4
 assign [class="discord"] $ws4
 
-assign [class="Pinta"] $ws5
+assign [class="pinta"] $ws5
 assign [class="Gimp"] $ws5
 assign [class="Evince"] $ws5
 assign [class="transmission-gtk"] $ws5
