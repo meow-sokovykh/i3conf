@@ -90,6 +90,16 @@ set $ws2 "2:"
 set $ws3 "3: "
 set $ws4 "4:"
 set $ws5 "5:"
+set $ws6 "6: "
+
+set $main_screen eDP-1
+set $secondary_screen HDMI-A-1-0
+workspace $ws1 output $main_screen
+workspace $ws2 output $main_screen
+workspace $ws3 output $main_screen
+workspace $ws4 output $main_screen
+workspace $ws5 output $main_screen
+workspace $ws6 output $secondary_screen
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -97,6 +107,7 @@ bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
 bindsym $mod+KP_Left workspace $ws4
 bindsym $mod+KP_Begin workspace $ws5
+bindsym $mod+KP_Right workspace $ws6
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
@@ -104,6 +115,7 @@ bindsym $mod+Shift+2 move container to workspace $ws2
 bindsym $mod+Shift+3 move container to workspace $ws3
 bindsym $mod+Shift+KP_Left move container to workspace $ws4
 bindsym $mod+Shift+KP_Begin move container to workspace $ws5
+bindsym $mod+Shift+KP_Right move container to workspace $ws6
 
 #Move to urgent window
 bindsym $mod+grave [urgent=latest] focus
@@ -127,7 +139,8 @@ client.unfocused    $grey $black $white $grey $grey
 client.urgent $urgent $black $urgent $urgent $urgent
 
 bar {
-  strip_workspace_numbers yes
+        output primary
+        strip_workspace_numbers yes
 	separator_symbol $bar_separator
 	status_command i3blocks -c $HOME/.config/i3/i3blocks.conf
 	position top
@@ -145,6 +158,27 @@ bar {
 	       	urgent_workspace $urgent $black $urgent
 	}
 }
+
+bar {
+	output nonprimary
+        strip_workspace_numbers yes
+	separator_symbol $bar_separator
+	position top
+	height 36
+
+        # Do not allow applications to use the bar as icon tray
+	tray_output none
+
+	colors  {
+	        background $black
+	        statusline $white
+	        focused_workspace $main_color $main_color $white
+	        active_workspace  $grey $black $white
+	        inactive_workspace $grey $black $white
+	       	urgent_workspace $urgent $black $urgent
+	}
+}
+
 
 #Let's assign some apps to their workspaces
 assign [class="Alacritty"] $ws1 #Do not want it
@@ -250,6 +284,7 @@ bindsym $mod+Shift+P exec sh $scripts/proxyoff.sh
 bindsym $mod+N exec pkill -RTMIN+2 i3blocks
 
 #Autorun
+exec xrandr --output $secondary_screen --auto --right-of $main_screen
 exec $terminal
 exec $terminal
 exec $browser
