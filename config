@@ -237,6 +237,7 @@ mode $mode_launcher {
 	bindsym m exec thunderbird; mode "default"
 	bindsym d exec discord; mode "default"
 	bindsym b exec blueberry; mode "default"
+	bindsym v exec AmneziaVPN; mode "default"
 
 	bindsym c exec $editor $config; mode "default"
 
