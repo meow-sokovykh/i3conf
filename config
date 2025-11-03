@@ -181,7 +181,7 @@ bar {
 
 
 #Let's assign some apps to their workspaces
-assign [class="Alacritty"] $ws1 #Do not want it
+# assign [class="Alacritty"] $ws1 #Do not want it
 
 assign [instance="Navigator" window_role="browser"] $ws2
 
