@@ -159,25 +159,25 @@ bar {
 	}
 }
 
-bar {
-	output nonprimary
-        strip_workspace_numbers yes
-	separator_symbol $bar_separator
-	position top
-	height 36
-
-        # Do not allow applications to use the bar as icon tray
-	tray_output none
-
-	colors  {
-	        background $black
-	        statusline $white
-	        focused_workspace $main_color $main_color $white
-	        active_workspace  $grey $black $white
-	        inactive_workspace $grey $black $white
-	       	urgent_workspace $urgent $black $urgent
-	}
-}
+#bar {
+#	output nonprimary
+#        strip_workspace_numbers yes
+#	separator_symbol $bar_separator
+#	position top
+#	height 36
+#
+#       # Do not allow applications to use the bar as icon tray
+#	tray_output none
+#
+#	colors  {
+#	        background $black
+#	        statusline $white
+#	        focused_workspace $main_color $main_color $white
+#	        active_workspace  $grey $black $white
+#	        inactive_workspace $grey $black $white
+#	       	urgent_workspace $urgent $black $urgent
+#	}
+#}
 
 
 #Let's assign some apps to their workspaces
