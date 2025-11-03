@@ -123,3 +123,4 @@ See `scripts/volume.sh`
 * `transmission-gtk` -- torrent client -- `Win+G; T`
 * `steam` + `steam-native-runtime` -- game store -- `Win+G; Enter`
 * `cloudflare-warp-bin` -- `Win+P` for ON, `Win+Shift+P` for off
+* `amnezia-vpn-bin` (`AmneziaVPN`) -- `Win+D; V`
