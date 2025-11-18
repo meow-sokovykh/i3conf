@@ -92,8 +92,8 @@ set $ws4 "4:"
 set $ws5 "5:"
 set $ws6 "6: "
 
-set $main_screen eDP-1
-set $secondary_screen HDMI-A-1-0
+set $main_screen eDP
+set $secondary_screen HDMI-A-0
 workspace $ws1 output $main_screen
 workspace $ws2 output $main_screen
 workspace $ws3 output $main_screen
