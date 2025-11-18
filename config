@@ -192,7 +192,7 @@ assign [class="Enpass"] $ws3
 assign [class="Todoist"] $ws3
 
 assign [class="TelegramDesktop"] $ws4
-assign [class="thunderbird"] $ws4
+assign [class="org.mozilla.Thunderbird"] $ws4
 assign [class="discord"] $ws4
 
 assign [class="pinta"] $ws5
