@@ -71,12 +71,12 @@ esac
 val=$(volume | format)
 
 if [[ "$val" == "" ]]; then
-	echo ": "
+	echo " : "
 else
 	if [[ "$val" == "0%" ]]; then
-		label=$(echo ":  ")
+		label=$(echo " :  ")
 	else
-		label=$(echo ":  ")
+		label=$(echo "   : ")
 	fi
 	printf "%s%4s\n" "$label" "$val"
 	printf "%s%4s" "$label" "$val"
