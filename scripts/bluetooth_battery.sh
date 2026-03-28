@@ -1,6 +1,10 @@
 #!/bin/bash
 percentage=$((echo info) | bluetoothctl | grep -oP "Battery\ Percentage:\ 0x\d+\ \(\K[^\)]*")
 
+if [[ -z $percentage ]]; then
+    exit
+fi
+
 if [[ "$percentage" -ge 60 ]]; then
     icon=" "
     color="#4CAF50"
