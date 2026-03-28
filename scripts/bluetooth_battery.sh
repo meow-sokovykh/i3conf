@@ -1,5 +1,5 @@
 #!/bin/bash
-percentage=$((echo info) | bluetoothctl | grep -oP "Battery\ Percentage:\ 0x\d+\ \(\K[^\)]*")
+percentage=$((echo info) | bluetoothctl | grep -oP "Battery\ Percentage:\ 0[xX][0-9a-fA-F]+\ \(\K[^\)]*")
 
 if [[ -z $percentage ]]; then
     exit
