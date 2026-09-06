@@ -45,13 +45,13 @@ else:
     color=""
 
     if percentleft < 30:
-        fulltext=""
+        fulltext=" "
         color = "#FF5722"
     elif percentleft < 70:
-        fulltext=""
+        fulltext=" "
         color = "#FF9800"
     else:
-        fulltext=""
+        fulltext=" "
         color = "#4CAF50"
 
     if state == "Discharging":
@@ -63,10 +63,10 @@ else:
     elif state == "Unknown":
         fulltext += "??"
     else:
-        fulltext += FA_LIGHTNING + " " + FA_PLUG + " "
+        fulltext += FA_LIGHTNING + FA_PLUG
         color="#4CAF50"
 
-    fulltext += ": "+str(percentleft) +"% "
+    fulltext += "  "+str(percentleft) +"% "
     #fulltext += timeleft
 
 print(fulltext)
