@@ -110,7 +110,6 @@ See `scripts/volume.sh`
 * `discord` -- messenger -- `Win+D; D`
 
 #### Editors
-* `pinta` -- for simple stuff -- `Win+D; P`
 * `gimp` -- for complex stuff -- `Win+D; G`
 
 #### Office
@@ -121,6 +120,5 @@ See `scripts/volume.sh`
 
 #### Other
 * `transmission-gtk` -- torrent client -- `Win+G; T`
-* `steam` + `steam-native-runtime` -- game store -- `Win+G; Enter`
-* `cloudflare-warp-bin` -- `Win+P` for ON, `Win+Shift+P` for off
+* `steam` -- game store -- `Win+G; Enter`
 * `amnezia-vpn-bin` (`AmneziaVPN`) -- `Win+D; V`

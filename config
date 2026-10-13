@@ -201,7 +201,6 @@ assign [class="TelegramDesktop"] $ws4
 assign [class="org.mozilla.Thunderbird"] $ws4
 assign [class="discord"] $ws4
 
-assign [class="pinta"] $ws5
 assign [class="Gimp"] $ws5
 assign [class="Evince"] $ws5
 assign [class="transmission-gtk"] $ws5
@@ -236,7 +235,6 @@ bindsym $mod+g mode $mode_game_launcher
 mode $mode_launcher {
 	bindsym Return exec $browser; mode "default"
 	bindsym f exec $filebrowser; mode "default"
-	bindsym p exec pinta; mode "default"
 	bindsym g exec gimp; mode "default"
 	bindsym o exec libreoffice; mode "default"
 	bindsym t exec Telegram; mode "default"
