@@ -24,7 +24,7 @@ fi
 
 if echo $IFACE_NAME | grep -q wlan
 then
-	POSTFIX="$POSTFIX [connected to $(iw dev $IFACE_NAME link | awk '/SSID/{print $2}')]"
+	POSTFIX="$POSTFIX [connected to $(iwgetid -r)]"
 fi
 
 echo $IFACE_NAME$POSTFIX
